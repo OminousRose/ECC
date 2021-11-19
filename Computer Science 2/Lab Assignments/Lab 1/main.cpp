@@ -22,6 +22,7 @@ cout << result;
 
 string reverse(char word[100])
 {
+
     char a= 'a';
     char b= 'b';
 
@@ -35,19 +36,5 @@ string reverse(char word[100])
             word[strlen(word)-1-i]=*front;
     }
         
-    return word;
-        
-
-
-}
-
-
-
-
-
-
-
-
-
-
-}
+        return word;
+}   
