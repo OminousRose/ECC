@@ -16,27 +16,45 @@ using namespace std;
 
 int main(){
 
-    vector<int> vec_int;                // Initialize the vector and an int to store into the vector
-    int num;
+    // Initialize score container and scores int
+    vector<int> scoresVector;                
+    int studentScore = 0;
 
     cout << "Enter the student's scores to be organized, when you are finished enter -1" << endl;
-    cin >> num;                         // Asks for user input
-    
-            while(num !=-1){                                // The program will keep looping as long as -1 is not the input
+    cin >> studentScore;                         // Asks for user input
+
+            // The program will keep looping as long as -1 is not the input
+            while(studentScore !=-1){                                
                 
-                vec_int.push_back(num);
-                cin >> num;
+                scoresVector.push_back(studentScore);
+                cin >> studentScore;
 
             }
 
-    int max = *(max_element(vec_int.begin(), vec_int.end()))+1;     // the max is set to the highest integer in the vector plus one
-    int *hist= new int[max];                
-    for(int i=0; i<max; i++) hist[i] = 0;
-    for(int i=0; i<vec_int.size(); i++)                         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    hist[vec_int[i]]++;                                         //This code progressively keeps adding 1 from 0 until it finds the same integer located in the vector
-    for(int i=0; i<max; i++){                                   //it counts it and proceeds to add 1 until it finds the next integer in the vector, process repeats
-    if(hist[i]!=0)                                              //Program loops until it hits the amount of integers in the vector so it can display the amount of each int
-    cout <<"Number of "<< i<<"'s: " << hist[i] << endl;         //    Output
+    // Dereferencing iterator pointing to the element with the largest value in the range [first,last)
+    int maxScore = *(max_element(scoresVector.begin(), scoresVector.end()));     
+
+    // Allocate dynamic array with maxScore size + 1 for index offset
+    int *hist = new int[maxScore + 1];          
+
+    // Initializing all possible elements in array to 0
+    for(int i=0; i <= maxScore; i++) hist[i] = 0;
+
+    // Updates histogram
+    // Ex. 1, 1, 3, 4, 5 - Scores
+    // Max score = 5
+    // Hist[0, 1, 2, 3, 4, 5]
+    // Hist[0] = 0 ... Hist[5] = 0
+    // Hist[scoresVector[0]] == Hist[1] = 0++ = 1
+    // Hist[scoresVector[1]] == Hist[1] = 1++ = 2
+    for(int i=0; i <= scoresVector.size(); i++)                         
+        hist[scoresVector[i]]++;     
+
+    // Prints available numbers in histogram                                        
+    for(int i=0; i<=maxScore; i++){                                   
+        if(hist[i]!=0)                                              
+            cout <<" Number of "<< i<<"'s: " << hist[i] << endl;        
     }
+
     return 0;
 }
