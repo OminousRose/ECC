@@ -83,7 +83,7 @@ int main()
     // can access it.
     obj.distAddedToOdometer(dist1);
 
-    cout << "Enter the fourth trip distance in miles \n:";
+    cout << "Enter the fourth trip distance in miles \n";
     cin >> dist2;
     // obj calls the distance to add to the odometer function 
     // which is only possible if the void function was set to public so int main 
