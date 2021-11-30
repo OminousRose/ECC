@@ -1,11 +1,11 @@
 //    Name: Eric Flores
-//    Assignment: Lab 2
+//    Assignment: Lab 3
 //    Title: Odometer  
 //    Date: 11/23/2021  
 // 
 //    Description: This program uses classes to create a makeshift odometer like the one's found in many vehicles
-//                 
-//                 
+//                 User fuel efficiency and distances so the program is able to use those inputs to call member functions
+//                 inside the Odometer class to calculate gallons consumed over the course of two trips.
 //
 //
 #include <iostream>
