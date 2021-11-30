@@ -9,132 +9,163 @@
 //
 //
 #include <iostream>
+
 #include <string>
+
 using namespace std;
-//Class declaration
+
 class Movie
+
 {
-    // Member declaration
-    private:
-        string Movie_name, MPAA_Rating;
-        // Set the movie rating in an array from 0 to 5 star(s)     
-        int Rate[5];
-    // Functions necessary to be called from main
-    public:
-         
-        Movie(string Movie)
-        {
-            Movie_name = Movie;
-            MPAA_Rating = 5;
-            Rate[0]=0;
-            Rate[1]=0;
-            Rate[2]=0;
-            Rate[3]=0;
-            Rate[4]=0;
-            Rate[5]=0;
-        }
-        
-        string getMovie_name()
-        {
-            return Movie_name;
-        }
-        
-        void setMovieName(string str)
-        {
-            Movie_name = str;
-        }
 
-      string getMPAA_rating()
-      {
-          return MPAA_Rating;
-      }  
-      
-      void setMPAA_rating(string str)
-      {
-          MPAA_Rating = str;
-      }
+private:
 
-      void Rating(int stars)
-      {
-          int s = stars;
-          if(stars>0 && stars <=5)
-            {
-                this->Rate[stars-1]++;
-            }
-            // In the event a user inputs a nonvalid number, the program recognizes an error
-            else
-            {
-                cout << "Number is not in the 1-5 range of rating!" << endl;
-            }
-      }
+               string title;
 
-      float getAverage()
-      {
-          float Rating = Rate[0]+Rate[1]+Rate[2]+Rate[3]+Rate[4];
-          float denom = 5.0;
-          float result = Rating/denom;
+               string mpaa_rating;
 
-          return result;
-      }
+               int num_rating1, num_rating2, num_rating3, num_rating4, num_rating5;
+
+public:
+
+               Movie(string title, string mpaa_rating);
+
+               string getTitle() const;
+
+               string getMpaaRating() const;
+
+               void incrementRating(int rating);
+
+               double getAverage() const;
+
 };
 
+Movie::Movie(string title, string mpaa_rating)
 
-int main()
 {
-    string movie;
-    int rating;
-    char again = 'y';
 
-    cout << "Enter a movie name. \n";
-    char c = 0;
-    while(c !='\n')
-        {
-            c = cin.get();
-            movie.push_back(c);
-        }
+               this->title = title;
 
-        movie.erase(movie.end()-1);
-        
-        Movie obj1(movie);
-        while(again == 'y' || again == 'Y')
-        {
-            cout << "Add a movie rating(1 through 5)\n";
-            cin >> rating;
-            obj1.Rating(rating);
+               this->mpaa_rating = mpaa_rating;
 
-            cout << "Continue adding ratings? (y/n) \n";
-            cin >> again;
-        }
+               num_rating1 = 0;
 
-        cout << "\n Enter a movie name \n";
-        c = 0;
-        while(c !='\n')
-        {
-            c = cin.get();
-            movie.push_back(c);
-        }
+               num_rating2 = 0;
 
-        movie.erase(movie.end()-1);
+               num_rating3 = 0;
 
-        Movie obj2(movie);
+               num_rating4 = 0;
 
-        again = 'y';
-        while(again == 'y' && again == 'Y')
-        {
-            cout << "Add a movie rating\n";
-            cin >> rating;
-            obj2.Rating(rating);
+               num_rating5 = 0;
 
-            cout << "Continue adding ratings? (y/n)\n";
-            cin >> again;
-        }
+}
 
-        float avg1 = obj1.getAverage();
-        float avg2 = obj2.getAverage();
+string Movie::getTitle() const
 
-        cout << "\nAverage rating for" << obj1.getMovie_name() <<":" << avg1 << endl;
-        cout << "Average rating for" << obj2.getMovie_name() <<":" << avg2 << endl;
+{
 
-        system("pause");
-        return 0;
+               return title;
+
+}
+
+string Movie::getMpaaRating() const
+
+{
+
+               return mpaa_rating;
+
+}
+
+void Movie::incrementRating(int rating)
+
+{
+
+               switch(rating)
+
+               {
+
+               case 1:
+
+                              num_rating1++;
+
+                              break;
+
+               case 2:
+
+                              num_rating2++;
+
+                              break;
+
+               case 3:
+
+                              num_rating3++;
+
+                              break;
+
+               case 4:
+
+                              num_rating4++;
+
+                              break;
+
+               case 5:
+
+                              num_rating5++;
+
+                              break;
+
+               }
+
+}
+
+double Movie:: getAverage() const
+
+{
+
+               int totalRating = num_rating1 + num_rating2*2 + num_rating3*3 + num_rating4*4 + num_rating5*5;
+
+               int num_rating = num_rating1+num_rating2+num_rating3+num_rating4+num_rating5;
+
+               return(((double)totalRating)/num_rating);
+
+}
+
+int main() {
+
+               string title, mpaa_rating;
+
+               int rating;
+
+               cout<<"Enter the title of the movie : ";
+
+               getline(cin,title);
+
+               title = title.substr(0,title.length()-1);
+
+               cout<<"Enter the MPAA rating : ";
+
+               cin>>mpaa_rating;
+
+               Movie movie(title,mpaa_rating);
+
+               cout<<"Enter space-separated list of people ratings for the movie : ";
+
+               while(true)
+
+               {
+
+                              cin>>rating;
+
+                              if(rating == -1)
+
+                                             break;
+
+                              movie.incrementRating(rating);
+
+               }
+
+               cout<<"\nMPAA rating for "<<movie.getTitle()<<" is "<<movie.getMpaaRating()<<", and the average people rating is "<<movie.getAverage()<<".";
+
+               return 0;
+
 }
