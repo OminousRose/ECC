@@ -24,7 +24,7 @@ private:
 public:
     Movie(string title, string mpaa_rating);
     string getTitle() const;
-    string getMPAARating() const;
+    string getMpaaRating() const;
     void incrementRating(int rating);
     double getAverage() const;
 };
@@ -50,7 +50,7 @@ string Movie::getTitle() const
 
     return title;
 }
-string Movie::getMPAARating() const
+string Movie::getMpaaRating() const
 {
     return mpaa_rating;
 }
