@@ -1,5 +1,5 @@
 //    Name: Eric Flores
-//    Assignment: Lab 5
+//    Assignment: Lab 6
 //    Title:   Complex Numbers
 //    Date: 11/30/2021  
 // 
