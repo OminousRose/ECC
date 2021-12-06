@@ -1,13 +1,13 @@
 //    Name: Eric Flores
 //    Assignment: Lab 6
 //    Title:   Rational Numbers
-//    Date: 11/30/2021  
+//    Date: 12/6/2021  
 // 
-//    Description: This program uses headers and classes to work with user input integers to create rational numbers.
-//                 The program uses those rational numbers to find: the product of the two integers, the sum, the difference, and the quotient.
-//                 Additionally, the program also creates a unique truth table that compares the two rational numbers
-//                 to determine which rational number is greater, and if or they are equal rational numbers.
-//
+//    Description: This program uses class "Rational" whoch stores two rational numbers.
+//                 A test program is made in order to print out the following: the sum, difference, product
+//                 quotient, and a truth comparison table of the two user input rational numbers.
+//                 The class itself has a constructor which initializes the numberator and denominator to the values of 
+//                 its respective arguments, a default constructor which initialize the rational to 0/1 and overloaded operators.
 
 #include <iostream>
 using namespace std;
