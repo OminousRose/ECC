@@ -8,226 +8,211 @@
 //                 Additionally, the program also creates a unique truth table that compares the two rational numbers
 //                 to determine which rational number is greater, and if or they are equal rational numbers.
 //
+
 #include <iostream>
 using namespace std;
 
-class Rational
-{
-    int numerator;
-    int denominator;
-
-public:
+class Rational {
+    // class rational declaration
+    int numerator, denominator;
+    // define a class called Rational that would be used to store rational
+    // numbers. Include a constructor with two arguments that would initialize the
+    // numerator and denominator to the values of its respective arguments; include a
+    // default constructor that would initialize the rational to 0/1. Overload the
+    // operators =, +=, -=, *=, /=, and then using these operators overload the
+    // following operators: +, -, *, /. Also overload the comparison operators <, >,
+    // ==, !=, <=, >= and the i/o stream operators >> and <<.
+    public:
     Rational();
-    Rational(int n, int d);
-    Rational &operator=(const Rational &r);
-    Rational &operator+=(const Rational &r);
-    Rational &operator-=(const Rational &r);
-    Rational &operator*=(const Rational &r);
-    Rational &operator/=(const Rational &r);
-    friend Rational operator+(const Rational &a, Rational &b);
-    friend Rational operator-(const Rational &a, Rational &b);
-    friend Rational operator*(const Rational &a, Rational &b);
-    friend Rational operator/(const Rational &a, Rational &b);
-    friend bool operator<(const Rational &a, const Rational &b);
-    friend bool operator>(const Rational &a, const Rational &b);
-    friend bool operator==(const Rational &a, const Rational &b);
-    friend bool operator!=(const Rational &a, const Rational &b);
-    friend bool operator<=(const Rational &a, const Rational &b);
-    friend bool operator>=(const Rational &a, const Rational &b);
-    friend ostream &operator<<(ostream &out, const Rational &r);
-    friend istream &operator>>(istream &in, Rational &r);
+    Rational(int num, int den);
+    Rational(const Rational& r);
+    int get_numerator() {return numerator;}
+    int get_denominator() {return denominator;}
+    void simplify();
+    Rational& operator=(const Rational& r);
+    Rational& operator+=(const Rational& r);
+    Rational& operator-=(const Rational& r);
+    Rational& operator*=(const Rational& r);
+    Rational& operator/=(const Rational& r);
+    Rational operator+(const Rational& r);
+    Rational operator-(const Rational& r);
+    Rational operator*(const Rational& r);
+    Rational operator/(const Rational& r);
+    bool operator<(const Rational& r);
+    bool operator>(const Rational& r);
+    bool operator==(const Rational& r);
+    bool operator!=(const Rational& r);
+    bool operator<=(const Rational& r);
+    bool operator>=(const Rational& r);
+    friend ostream& operator<<(ostream& os, const Rational& r);
+    friend istream& operator>>(istream& is, Rational& r);
+
 };
 
-Rational::Rational()
-{
-    numerator = 0;
-    denominator = 1;
-}
-Rational::Rational(int n, int d)
-{
-    numerator = 0;
-    denominator = 1;
-}
-Rational &Rational::operator=(const Rational &r)
-{
-    this->numerator = r.numerator;
-    this->denominator = r.denominator;
-    return *this;
-}
-Rational &Rational::operator+=(const Rational &r)
-{
-    this->numerator = this->numerator * r.denominator + r.numerator * this->denominator;
-    this->denominator = this->denominator * r.denominator;
-    return *this;
-}
-Rational &Rational::operator-=(const Rational &r)
-{
-    this->numerator = this->numerator * r.denominator - r.numerator * this->denominator;
-    this->denominator = this->denominator * r.denominator;
-    return *this;
-}
-Rational &Rational::operator*=(const Rational &r)
-{
-    this->numerator = this->numerator * r.numerator;
-    this->denominator = this->denominator * r.denominator;
-    return *this;
-}
-Rational &Rational::operator/=(const Rational &r)
-{
-    this->numerator = this->numerator * r.denominator;
-    this->denominator = this->denominator * r.numerator;
-    return *this;
-}
-Rational operator+(const Rational &a, Rational &b)
-{
-    Rational r;
-    r.numerator = a.numerator * b.denominator + b.numerator * a.denominator;
-    r.denominator = a.denominator * b.denominator;
-    return r;
-}
-Rational operator-(const Rational &a, Rational &b)
-{
-    Rational r;
-    r.numerator = a.numerator * b.denominator - b.numerator * a.denominator;
-    r.denominator = a.denominator * b.denominator;
-    return r;
-}
-Rational operator*(const Rational &a, Rational &b)
-{
-    Rational r;
-    r.numerator = a.numerator * b.numerator;
-    r.denominator = a.denominator * b.denominator;
-    return r;
-}
-Rational operator/(const Rational &a, Rational &b)
-{
-    Rational r;
-    r.numerator = a.numerator * b.denominator;
-    r.denominator = a.denominator * b.numerator;
-    return r;
-}
-bool operator<(const Rational &a, const Rational &b)
-{
-    if ((a.numerator / a.denominator) < (b.numerator / b.denominator))
-        return true;
-    return false;
-}
-bool operator>(const Rational &a, const Rational &b)
-{
-    if ((a.numerator / a.denominator) > (b.numerator / b.denominator))
-        return true;
-    return false;
-}
-bool operator==(const Rational &a, const Rational &b)
-{
-    if ((a.numerator / a.denominator) == (b.numerator / b.denominator))
-        return true;
-    return false;
-}
-bool operator!=(const Rational &a, const Rational &b)
-{
-    if ((a.numerator / a.denominator) != (b.numerator / b.denominator))
-        return true;
-    return false;
-}
-bool operator<=(const Rational &a, const Rational &b)
-{
-    if ((a.numerator / a.denominator) <= (b.numerator / b.denominator))
-        return true;
-    return false;
-}
-bool operator>=(const Rational &a, const Rational &b)
-{
-    if ((a.numerator / a.denominator) >= (b.numerator / b.denominator))
-        return true;
-    return false;
-}
-ostream &operator<<(ostream &out, const Rational &r)
-{
-    out << "    Numerator = " << r.numerator << "\n";
-    out << "    Denominator = " << r.denominator << "\n";
-    return out;
-}
-istream &operator>>(istream &in, Rational &r)
-{
-    cout << "Enter the numerator: ";
-    in >> r.numerator;
-    cout << "Enter the denominator: ";
-    in >> r.denominator;
-    return in;
+int gcd(int a, int b) {
+// this function returns the gcd of a and b recursively
+if(b == 0)
+return a;
+return gcd(b, a%b);
 }
 
-// driver function
-int main()
-{
-    Rational r1, r2, r3;
+Rational::Rational(){
+// default constructor
+numerator = 0;
+denominator = 1;
+}
 
-    cout << "For r1:\n";
-    cin >> r1;
-    cout << "For r2:\n";
-    cin >> r2;
-    cout << "For r3:\n";
-    cin >> r3;
+Rational::Rational(int num, int den){
+// parameterised constructor
+numerator = num;
+denominator = den;
+}
 
-    Rational r4(1, 4);
+Rational::Rational(const Rational& r){
+// copy constructor
+numerator = r.numerator;
+denominator = r.denominator;
+}
 
-    r1 += r2;
-    r2 *= r3;
+void Rational::simplify() {
+// method simplifies the rational number by dividing both numerator and denominator by gcd
+if(denominator < 0) {
+numerator *= -1;
+denominator *= -1;
+}
 
-    Rational r5, r6, r7, r8;
-    r5 = r3 + r4;
-    r6 = r3 - r4;
-    r7 = r3 * r4;
-    r8 = r3 / r4;
+int common_factor = gcd(numerator, denominator);
+numerator /= common_factor;
+denominator /= common_factor;
+}
 
-    cout << "===============\n";
-    cout << "for r1:\n"
-         << r1;
-    cout << "for r2:\n"
-         << r2;
-    cout << "for r3:\n"
-         << r3;
-    cout << "for r4:\n"
-         << r4;
-    cout << "for r5:\n"
-         << r5;
-    cout << "for r6:\n"
-         << r6;
-    cout << "for r7:\n"
-         << r7;
-    cout << "for r8:\n"
-         << r8;
-    cout << "===============\n";
+Rational& Rational::operator=(const Rational& r){
+// overloaded = operator
+numerator = r.numerator;
+denominator = r.denominator;
+return *this;
+}
 
-    if (r1 < r2)
-        cout << "\nr1 is less than r2\n";
-    else
-        cout << "r1 is not less than r2\n";
+Rational& Rational::operator+=(const Rational& r){
+// overloaded += operator
+numerator = (numerator * r.denominator) + (denominator * r.numerator);
+denominator *= r.denominator;
+this->simplify();
 
-    if (r1 > r2)
-        cout << "r1 is greater than r2\n";
-    else
-        cout << "r1 is not greater than r2\n";
+return *this;
+}
 
-    if (r3 <= r4)
-        cout << "r3 is less than or equal to r4\n";
-    else
-        cout << "r3 is not less than or equal to r4\n";
+Rational& Rational::operator-=(const Rational& r){
+// overloaded -= operator
+numerator = (numerator * r.denominator) - (denominator * r.numerator);
+denominator *= r.denominator;
+this->simplify();
 
-    if (r3 >= r4)
-        cout << "r3 is greater than or equal to r4\n";
-    else
-        cout << "r3 is not greater than or equal to r4\n";
+return *this;
+}
 
-    if (r3 == r4)
-        cout << "r3 is equal to r4\n";
-    else
-        cout << "r3 is not equal to r4\n";
+Rational& Rational::operator*=(const Rational& r){
+// overloaded *= operator
+numerator *= r.numerator;
+denominator *= r.denominator;
+this->simplify();
 
-    if (r3 != r4)
-        cout << "r3 is not equal to r4\n";
-    else
-        cout << "r3 is equal to r4\n";
+return *this;
+}
 
-    return 0;
+Rational& Rational::operator/=(const Rational& r){
+// overloaded /= operator
+if(r.numerator == 0) {
+throw "Division by zero not allowed";
+}
+numerator *= r.denominator;
+denominator *= r.numerator;
+this->simplify();
+
+return *this;
+}
+
+Rational Rational::operator+(const Rational& r){
+// overloaded + operator
+return Rational{*this} += r;
+}
+
+Rational Rational::operator-(const Rational& r){
+// overloaded - operator
+return Rational{*this} -= r;
+}
+
+Rational Rational::operator*(const Rational& r){
+// overloaded * operator
+return Rational{*this} *= r;
+}
+
+Rational Rational::operator/(const Rational& r){
+// overloaded / operator
+return Rational{*this} /= r;
+}
+
+bool Rational::operator<(const Rational& r){
+// overloaded < operator
+return (numerator / (denominator * 1.0)) < (r.numerator / (r.denominator * 1.0));
+}
+
+bool Rational::operator>(const Rational& r){
+// overloaded > operator
+return (numerator / (denominator * 1.0)) > (r.numerator / (r.denominator * 1.0));
+}
+
+bool Rational::operator==(const Rational& r){
+// overloaded == operator
+return numerator == r.numerator && denominator == r.denominator;
+}
+
+bool Rational::operator!=(const Rational& r){
+// overloaded != operator
+return !(*this == r);
+}
+
+bool Rational::operator<=(const Rational& r){
+// overloaded <= operator
+return (numerator / (denominator * 1.0)) <= (r.numerator / (r.denominator * 1.0));
+}
+
+bool Rational::operator>=(const Rational& r){
+// overloaded >= operator
+return (numerator / (denominator * 1.0)) >= (r.numerator / (r.denominator * 1.0));
+}
+
+ostream& operator<<(ostream& os, const Rational& r){
+// overloaded output stream for Rational objects
+os << r.numerator << "/" << r.denominator;
+return os;
+}
+
+istream& operator>>(istream& is, Rational& r){
+// overloaded input stream for Rational objects
+is >> r.numerator >> r.denominator;
+return is;
+}
+
+int main() {
+// testing rational class methods
+Rational R1, R2;
+cout << "Enter numerator and denominator of rational number 1: ";
+cin >> R1;
+cout << "Enter numerator and denominator of rational number 2: ";
+cin >> R2;
+cout << endl;
+// print sum, difference, product, and quotient
+cout << "Sum: " << R1 << " + " << R2 << " = " << R1 + R2 << endl << endl;
+cout << "Difference: " << R1 << " - " << R2 << " = " << R1 - R2 << endl << endl;
+cout << "Product: " << R1 << " * " << R2 << " = " << R1 * R2 << endl << endl;
+cout << "Quotient: " << R1 << " / " << R2 << " = " << R1 / R2 << endl << endl;
+// truth table of comparison tests
+cout << "Is " << R1 << " == " << R2 << "? " << ((R1==R2)?"true":"false") << endl << endl;
+cout << "Is " << R1 << " != " << R2 << "? " << ((R1!=R2)?"true":"false") << endl << endl;
+cout << "Is " << R1 << " > " << R2 << "? " << ((R1>R2)?"true":"false") << endl << endl;
+cout << "Is " << R1 << " < " << R2 << "? " << ((R1<R2)?"true":"false") << endl << endl;
+cout << "Is " << R1 << " >= " << R2 << "? " << ((R1>=R2)?"true":"false") << endl << endl;
+cout << "Is " << R1 << " <= " << R2 << "? " << ((R1<=R2)?"true":"false") << endl << endl;
+return 0;
 }
