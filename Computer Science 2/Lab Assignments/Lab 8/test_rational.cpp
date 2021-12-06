@@ -1,7 +1,7 @@
 //    Name: Eric Flores
-//    Assignment: Lab 6
-//    Title:   Rational Numbers
-//    Date: 11/30/2021  
+//    Assignment: Lab 8
+//    Title:   Rational Numbers II
+//    Date: 12/6/2021  
 // 
 //    Description: This program uses headers and classes to work with user input integers to create rational numbers.
 //                 The program uses those rational numbers to find: the product of the two integers, the sum, the difference, and the quotient.
