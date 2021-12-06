@@ -39,14 +39,14 @@ denominator /= common_factor;
 }
 
 Rational& Rational::operator=(const Rational& r){
-// Overloaded = operator
+// overloaded = operator
 numerator = r.numerator;
 denominator = r.denominator;
 return *this;
 }
 
 Rational& Rational::operator+=(const Rational& r){
-// Overloaded += operator
+// overloaded += operator
 numerator = (numerator * r.denominator) + (denominator * r.numerator);
 denominator *= r.denominator;
 this->simplify();
@@ -55,7 +55,7 @@ return *this;
 }
 
 Rational& Rational::operator-=(const Rational& r){
-// Overloaded -= operator
+// overloaded -= operator
 numerator = (numerator * r.denominator) - (denominator * r.numerator);
 denominator *= r.denominator;
 this->simplify();
@@ -64,7 +64,7 @@ return *this;
 }
 
 Rational& Rational::operator*=(const Rational& r){
-// Overloaded *= operator
+// overloaded *= operator
 numerator *= r.numerator;
 denominator *= r.denominator;
 this->simplify();
@@ -73,7 +73,7 @@ return *this;
 }
 
 Rational& Rational::operator/=(const Rational& r){
-// Overloaded /= operator
+// overloaded /= operator
 if(r.numerator == 0) {
 throw "Division by zero not allowed";
 }
@@ -85,63 +85,63 @@ return *this;
 }
 
 Rational Rational::operator+(const Rational& r){
-// Overloaded + operator
+// overloaded + operator
 return Rational{*this} += r;
 }
 
 Rational Rational::operator-(const Rational& r){
-// Overloaded - operator
+// overloaded - operator
 return Rational{*this} -= r;
 }
 
 Rational Rational::operator*(const Rational& r){
-// Overloaded * operator
+// overloaded * operator
 return Rational{*this} *= r;
 }
 
 Rational Rational::operator/(const Rational& r){
-// Overloaded / operator
+// overloaded / operator
 return Rational{*this} /= r;
 }
 
 bool Rational::operator<(const Rational& r){
-// Overloaded < operator
+// overloaded < operator
 return (numerator / (denominator * 1.0)) < (r.numerator / (r.denominator * 1.0));
 }
 
 bool Rational::operator>(const Rational& r){
-// Overloaded > operator
+// overloaded > operator
 return (numerator / (denominator * 1.0)) > (r.numerator / (r.denominator * 1.0));
 }
 
 bool Rational::operator==(const Rational& r){
-// Overloaded == operator
+// overloaded == operator
 return numerator == r.numerator && denominator == r.denominator;
 }
 
 bool Rational::operator!=(const Rational& r){
-// Overloaded != operator
+// overloaded != operator
 return !(*this == r);
 }
 
 bool Rational::operator<=(const Rational& r){
-// Overloaded <= operator
+// overloaded <= operator
 return (numerator / (denominator * 1.0)) <= (r.numerator / (r.denominator * 1.0));
 }
 
 bool Rational::operator>=(const Rational& r){
-// Overloaded >= operator
+// overloaded >= operator
 return (numerator / (denominator * 1.0)) >= (r.numerator / (r.denominator * 1.0));
 }
 
 ostream& operator<<(ostream& os, const Rational& r){
-// Overloaded output stream for Rational objects
+// overloaded output stream for Rational objects
 os << r.numerator << "/" << r.denominator;
 return os;
 }
 
 istream& operator>>(istream& is, Rational& r){
-// Overloaded input stream for Rational objects
+// overloaded input stream for Rational objects
 is >> r.numerator >> r.denominator;
 return is;
 }
