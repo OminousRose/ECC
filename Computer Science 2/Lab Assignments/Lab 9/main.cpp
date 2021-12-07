@@ -9,7 +9,7 @@
 //                 Definitions for the member functions of the class are written outside the class on a different file.
 //
 #include <iostream>
-#include "Complex.h"
+#include "complex.cpp"
 
 using namespace std;
 
