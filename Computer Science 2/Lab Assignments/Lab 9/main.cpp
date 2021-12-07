@@ -1,5 +1,5 @@
 //    Name: Eric Flores
-//    Assignment: Lab 8
+//    Assignment: Lab 9
 //    Title:   Complex Numbers II
 //    Date: 12/6/2021  
 // 
@@ -18,29 +18,29 @@ int main()
 Complex c1;
 Complex c2;
   
-cin >> c1;
-cin >> c2;
+cin >>  c1;
+cin >>  c2;
 
-cout << c1;
-cout << c2;
+cout << "Imaginary number 1 is: " << c1;
+cout << "Imaginary number 2 is: " << c2;
 
 Complex c3;
 c3 = c1+c2;
 
-cout << c3;
+cout << "Sum: " << c3;
 
 c3 = c1-c2;
-cout << c3;
+cout << "Difference : " << c3;
 
 c3 = c1*c2;
-cout << c3;
+cout << "Product: " << c3;
 
 if (c1 == c2)
 {
-cout << "Equal\n";
+cout << "The two imaginary numbers are equal\n";
 }   
 else
 {
-cout <<"Not equal\n";
+cout <<"The two imaginary numbers are not equal\n";
 }
 }
