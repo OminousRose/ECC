@@ -281,4 +281,6 @@ int main()
     cout << endl;
 
     cout << "Game over" << endl;
+
+    return 0;
 }
