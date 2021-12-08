@@ -248,7 +248,7 @@ int main()
     cout << endl;
 
     // Execute as long as the game has not been won
-    while (!gameWon)
+    while (!gameWon && validMovesVector.size() < 9)
     {
         // Read instructions per player
         displayInstructions(turnCount, playerOneName, playerTwoName);
@@ -269,6 +269,9 @@ int main()
         // Reset valid move
         validMove = false;
     }
+
+    if (validMovesVector.size() == 9 && gameWon == false)
+        cout << "No one wins" << endl;
 
     cout << endl;
 
