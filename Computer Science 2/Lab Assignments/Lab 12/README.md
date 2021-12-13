@@ -1,0 +1,5 @@
+Only Turn in the code.  You do not need to run this and provide output.
+
+Assume the existence of a BankAccount class.
+
+ Define a derived class, SavingsAccount that contains two instance variables: the first a double, named interestRate, and the second an integer named interestType. The value of the interestType variable can be 1 for simple interest and 2 for compound interest. There is also a constructor that accepts two parameters: a double that is used to initialize the interestRate variable, and a string that you may assume will contain either "Simple", or "Compound", and which should be used to initialize the interestType variable appropriately. There should also be a pair of functions getInterestRate and getInterestType that return the values of the corresponding data members (as double and int respectively).
