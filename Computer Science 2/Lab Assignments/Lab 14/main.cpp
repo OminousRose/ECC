@@ -69,9 +69,10 @@ private:
     // and towing capacity in pounds (type int ).
     double load_capacity;
     int towing_capacity;
-    .
-        // include a default constructor that would set all member variables to 0 and call the default constructor of class Vehicle;
-        public : Truck() : Vehicle()
+
+    // include a default constructor that would set all member variables to 0 and call the default constructor of class Vehicle;
+public:
+    Truck() : Vehicle()
     {
         load_capacity = 0.0;
         towing_capacity = 0;
