@@ -1,5 +1,5 @@
 Week 2 Chapter 9 Assignment
-
+Name: Eric Flores
 Directions:
 Answer the following with C++ code.  You do not need to compile however you should test the code to make sure there are no syntax errors. 
 

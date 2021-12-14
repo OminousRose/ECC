@@ -1,0 +1,64 @@
+Week 3 Chapter 10 Assignment
+Name: Eric Flores
+Directions:
+Answer the following with C++ code.  You do not need to compile however you should test the code to make sure there are no syntax errors. 
+1.	Write a full class definition for a class named Player, and containing the following members:
+•  A data member name of type string.
+•  A data member score of type int.
+•  A member function called setName that accepts a parameter and assigns it to name. The function returns no value.
+•  A member function called setScore that accepts a parameter and assigns it to score. The function returns no value.
+•  A member function called getName that accepts no parameters and returns the value of name.
+•  A member function called getScore that accepts no parameters and returns the value of score.
+
+    Answer:
+                class Player{
+                    public:
+                    void setName (string a){
+                    name = a;}
+                    void setScore (int b){
+                    score = b;}
+                    string getName(){
+                    return name;}
+                    int getScore(){
+                    return score;}
+
+                    private:
+                    string name;
+                    int score;
+                    };
+
+
+
+
+2. Write a full class definition for a class named ContestResult, and containing the following members:
+•	A data member winner of type string, initialized to the empty string.
+•	A data member secondPlace of type string, initialized to the empty string.
+•	A data member thirdPlace of type string, initialized to the empty string.
+•	A member function called setWinner that has one parameter, whose value it assigns to the data member winner.
+•	A member function called setSecondPlace that has one parameter, whose value it assigns to the data member secondPlace.
+•	A member function called setThirdPlace that has one parameter, whose value it assigns to the data member thirdPlace.
+•	A member function called getWinner that has no parameters and that returns the value of the data member winner.
+•	A member function called getSecondPlace that has no parameters and that returns the value of the data member secondPlace.
+•	A member function called getThirdPlace that has no parameters and that returns the value of the data member thirdPlace.
+
+
+    Answer:     
+                class ContestResult
+                    {
+                    private:
+                    string winner="";
+                    string secondPlace="";
+                    string thirdPlace="";
+
+                    public:
+                    void setWinner(string a){ winner=a;}
+                    void setSecondPlace(string b){secondPlace=b;}
+                    void setThirdPlace(string c){thirdPlace=c;}
+
+                    string getWinner() {return winner;}
+                    string getSecondPlace() {return secondPlace;}
+                    string getThirdPlace() {return thirdPlace;}
+
+                    };
+
+
