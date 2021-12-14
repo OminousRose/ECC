@@ -1,0 +1,75 @@
+Week 2 Chapter 9 Assignment
+
+Directions:
+Answer the following with C++ code.  You do not need to compile however you should test the code to make sure there are no syntax errors. 
+
+1.	Assume that ip, jp, and tp have all been declared to be pointers to int and that result has been declared to be an array of 100 elements. 
+    Assume further that ip has been initialized to point to an element in the first half of the array and that jp has been initialized to point to an element in the second half of the array.  
+    Write some code that makes jp point to the element that ip was pointing to and that makes ip point to the element that jp was pointing to.
+
+    
+    Answer:     tp = ip;
+                ip = jp;
+                jp = tp;
+
+
+
+2.	Declare a variable ip that can be assigned the address of an int variable. In other words, declare ip to be of type "pointer to int".
+
+
+    Answer:     int *p;
+
+
+
+3.	Declare a variable cp that can be assigned the address of an char variable. In other words, declare cp to be of type "pointer to char".
+
+
+    Answer:    char *cp;
+
+
+4.	Declare a variable dp that can be assigned the address of a double variable. In other words, declare dp to be of type "pointer to double".
+
+
+    Answer:     double *dp;
+
+
+5.	Write a function min that has three C string parameters and returns the smallest.
+
+
+  Answer:     char* min(char* a, char* b, char* c){
+                if(strcmp(a,b)<0 && strcmp(a,c)<0){
+                    return a;
+                }
+                else if(strcmp(b,c)<0){
+                    return b;
+                }
+                else{
+                    return c;
+                }
+                }
+
+
+
+6.	Write a function max that has two C string parameters and returns the larger of the two
+
+
+
+    Answer:     
+                #include<string.h>
+                int max(char string1[],charstring2[])
+                {
+                    if(strlen(string1)>strlen(string2)) return1;
+                    else
+                    if(strlen(string1)<strlen(string2)) return 2;
+                                else
+                                    {
+                                        while(*string1!=0)
+                                            {
+                                            if(*string1>*string2) return 1;
+                                                else if(*string1<*string2) return 2;
+                                            string1++;
+                                            string2++;
+                                            }
+                                    }
+                    return 0;
+                }
