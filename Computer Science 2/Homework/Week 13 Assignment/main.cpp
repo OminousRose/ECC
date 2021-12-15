@@ -22,7 +22,7 @@ int main()
         // additional chocolate and remaining coupons
         addi_Chocolate = remainingCoupons / 7;
         noChocolate = noChocolate + addi_Chocolate;
-        remainingCoupons = (remainingCoupons / 7);
+        remainingCoupons = (remainingCoupons % 7) + addi_Chocolate;
     }
 
     // output
