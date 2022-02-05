@@ -1,0 +1,95 @@
+Name: Eric Flores
+Date: 2/4/2022
+Assignment: Week 1 - Problems 1 - 13  Page 31 from book
+===============================================================================================================================================================
+Indicate whether the following statements are true (T) or false (F).
+1. A CPU consists of an ALU, memory, and a processor.
+        Answer: False
+
+2. Linking and loading is the step that prepares the object program for execution.
+        Answer: True
+
+3. An algorithm describes the problem solution step by step, while a computer program
+solves the problem in one step.
+        Answer: False
+
+4. A computer program is the implementation of an algorithm.
+        Answer: True
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Circle the letter for the best answer to complete each statement, or for the correct answer to
+each question.
+5. Instructions and data are stored in
+(a) the arithmetic logic unit (ALU).
+(b) the control unit (processor).
+(c) the central processing unit (CPU).
+(d) the memory.
+(e) the keyboard.
+                    Answer: (d) the memory
+    
+6. An operating system is
+(a) the software that is designed by users.
+(b) a convenient and efficient interface between the user and the hardware.
+(c) the set of utilities that allow us to perform common operations.
+(d) a set of software tools.
+                    Answer: (b) a convenient and efficient interface between the user and the hardware.
+
+7. Source code is
+(a) the result of compiler operations.
+(b) the process of getting information from the processor.
+(c) the set of instructions in a computer language that solve a specific problem.
+(d) the data stored in the computer memory.
+(e) the values entered through the keyboard.
+                    Answer: (c) the set of instructions in a computer language that solve a specific problem.
+
+8. An algorithm refers to
+(a) a step-by-step solution to solve a specific problem.
+(b) a collection of instructions that the computer can understand.
+(c) a code that allows us to type in text materials.
+(d) stepwise refinement.
+(e) a set of math equations to derive the problem solution.
+                    Answer: (a) a step-by-step solution to solve a specific problem.
+
+9. Object code is
+(a) the result of compiler operations on the source code.
+(b) the process of obtaining information from the processor.
+(c) a computer program.
+(d) a process involving the listing of commands required to solve a specific problem.
+(e) the result of the linking and loading process.
+                    Answer: (a) the result of compiler operations on the source code.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. Convert the following binary numbers to octal:
+(a) 110110101               Answer: (665)_8
+(b) 111101001101111         Answer: (75157)_8
+(c) 1010111001              Answer: (1271)_8
+(d) 1000000001              Answer: (1001)_8
+(e) 111111111               Answer: (777)_8
+
+
+11. Convert the following binary numbers to hexadecimal:
+(a) 100010101011            Answer: (8AB)_16
+(b) 1110011111110101        Answer: (E7F5)_16
+(c) 1010111001              Answer: (2B9)_16
+(d) 1000000000000001        Answer: (8001)_16
+(e) 111111111111            Answer: (FFF)_16
+
+
+12. Convert the following decimal numbers to octal:
+(a) 1292                    Answer: (2414)_8
+(b) 607                     Answer: (1137)_8
+(c) 9350                    Answer: (22206)_8
+(d) 1000010                 Answer: (3641112)_8
+(e) 1111111                 Answer: (4172107)_8
+
+
+13. Convert the following numbers to base 10:
+(a) 11010101_2               Answer: 213
+(b) 4762_8                   Answer: 2546
+(c) 30AF2_16                 Answer: 199410
+(d) 4103_5                   Answer: 528
+(e) 1111111_6                Answer: 55987
+
+
