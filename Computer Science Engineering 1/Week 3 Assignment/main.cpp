@@ -14,14 +14,14 @@ int main()
     // Program description.
     cout << "This program will compute the area of a triangle based on user input dimensions base 'b' and height 'h'." << endl;
     // Program prompts the user for triangle dimensions.
-    cout << "Enter the base of of the triangle";
+    cout << "Enter the base of of the triangle" << endl;
     cin >> b;
-    cout << "Enter the height of the triangle";
+    cout << "Enter the height of the triangle" << endl;
     cin >> h;
     // A is set to equal one half the base times the height of the triangle.
     A = (b * h) / 2;
     // Display results.
-    cout << "The area of the trianlge for base " << b << " and height " << h << "is " << A << endl;
+    cout << "The area of the trianlge for base " << b << " and height " << h << " is " << A << endl;
     // End program.
     return 0;
 }
