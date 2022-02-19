@@ -22,6 +22,7 @@ int main()
     A = (b * h) / 2;
     // Display results.
     cout << "The area of the trianlge for base " << b << " and height " << h << " is " << A << endl;
+
     // End program.
     return 0;
 }
