@@ -19,7 +19,7 @@ int main()
     cout << "Enter the height of the triangle";
     cin >> h;
     // A is set to equal one half the base times the height of the triangle.
-    A = (1 / 2)(b * h);
+    A = (b * h) / 2;
     // Display results.
     cout << "The area of the trianlge for base " << b << " and height " << h << "is " << A << endl;
     // End program.
