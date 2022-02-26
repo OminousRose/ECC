@@ -14,27 +14,19 @@ int main()
     // State the purpose of this program and instructs user with a direction.
     cout << "This program will print a value of true if the first number is evenly divisible by the second number you put" << endl;
     cout << "Enter two integer numbers." << endl;
-    // Declare variables a,b and d
-    int a, b;
-    double d;
+    // Declare variables a and b
+    int a = 0, b = 0;
     // Prompt the user to enter two integer numbers.
     cin >> a >> b;
     // Conditional statement to check if the first number is evenly divisible by the second.
     // If true
     if (a % b == 0)
     {
-
-        double d;
-        d = a / b;
-        cout << "Results: " << d << endl;
         cout << "The first number is evenly divisible by the second number: True!" << endl;
     }
     // If false
     else
     {
-        double d;
-        d = a / b;
-        cout << "Results: " << d << endl;
         cout << "The first number is evenly divisible by the second number: False!" << endl;
     }
     // End of program.
