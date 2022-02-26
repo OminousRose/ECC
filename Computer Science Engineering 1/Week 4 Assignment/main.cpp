@@ -17,8 +17,6 @@ int main()
     // Declare variables a,b and d
     int a, b;
     double d;
-    // Declare d as a quotient of a and b.
-    d = a / b;
     // Prompt the user to enter two integer numbers.
     cin >> a >> b;
     // Conditional statement to check if the first number is evenly divisible by the second.
@@ -26,12 +24,16 @@ int main()
     if (a % b == 0)
     {
 
+        double d;
+        d = a / b;
         cout << "Results: " << d << endl;
         cout << "The first number is evenly divisible by the second number: True!" << endl;
     }
     // If false
     else
     {
+        double d;
+        d = a / b;
         cout << "Results: " << d << endl;
         cout << "The first number is evenly divisible by the second number: False!" << endl;
     }
