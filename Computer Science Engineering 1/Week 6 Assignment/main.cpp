@@ -15,7 +15,7 @@ int main()
     float MPH, FPS;
     cout << "MPH" << '\t' << "res" << endl;
 
-    for (MPH = 0; MPH <= 65; MPH = MPH + 5;)
+    for (MPH = 0; MPH <= 65; MPH = MPH + 5)
     {
         FPS = (MPH * 5280 / 3600);
         cout << MPH << '\t' << float(FPS) << endl;
