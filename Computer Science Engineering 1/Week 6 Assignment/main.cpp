@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
     float MPH, FPS;
-    cout << "MPH" << '\t' << "res" << endl;
+    cout << "MPH" << '\t' << "FPS" << endl;
 
     for (MPH = 0; MPH <= 65; MPH = MPH + 5)
     {
