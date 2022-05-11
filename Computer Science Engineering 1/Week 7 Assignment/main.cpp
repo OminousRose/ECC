@@ -1,7 +1,7 @@
 /*
 Name: Eric Flores
 Date: 5/9/2022
-Assignment: Week 7 Assignments
+Assignment: Week 7 Assignment
 Description: Complete program Chapter 5_5 from the book. Submit screenshot and .cpp file.
 Program: This program generates a file of height and velocity values for a weather balloon. The information is also printed in a report.
 */
