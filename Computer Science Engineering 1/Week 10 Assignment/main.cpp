@@ -9,7 +9,6 @@ Program: 6_8: This program calculates the percentage points that lie outside of 
 #include <iostream>
 #include <fstream>
 #include "Point.h"
-#include "Points.cpp"
 using namespace std;
 
 int main()

@@ -1,6 +1,7 @@
 /*-------------------------------------------------------*/
 /* Point class Chapter6_7 */
 /* Filename: Point.h */
+
 class Point
 {
     // Type declaration statements
