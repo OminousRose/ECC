@@ -1,0 +1,39 @@
+/*
+Name: Eric Flores
+Date: 5/11/2022
+Assignment: Week 14 Assignment
+Description: Complete problems 9-13 from chapter 9. Page 533
+*/
+
+9.      Give the corresponding snapshot of memory after the following set of statements is
+        executed:
+
+        double name, x(20.5);
+        double *a = &x;
+        name = *a;
+
+        ANSWER:
+        Executing this code with the following statement:
+        cout << name << " " << x << " " << a;
+            gives us the following values of memory:
+            20.5
+            20.5
+            00DBFCE8
+
+        Problems 10–13 refer to the following statements:
+
+        int i1, i2;
+        int *p1, *p2;
+        i1 = 5;
+        p1 = &i1;
+        i2 = *p1/2 + 10;
+        p2 = p1;
+
+        10. What is the value of i1?
+        ANSWER: i1 = 5
+        11. What is the value of i2?
+        ANSWER: i2 = 12
+        12. What is the value of *p1?
+        ANSWER: *p1 = 5
+        13. What is the value of *p2?
+        ANSWER: *p2 = 5
