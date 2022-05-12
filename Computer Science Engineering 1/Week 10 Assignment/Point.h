@@ -15,11 +15,10 @@ public:
     // Overloaded operators
     double operator-(const Point &rhs) const;
     bool operator==(const Point &rhs) const;
-    // Accessor Methods Definition
+    // Accessor Methods Definitions
     double getX() const { return xCoord; }
     double getY() const { return yCoord; }
-    // Mutator Methods
+    // Mutator methods
     void setX(double newX);
     void setY(double newY);
 };
-/*-------------------------------------------------------*/
