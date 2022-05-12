@@ -7,8 +7,10 @@ Program: 9_7: This program counts the number of times a specified letter appears
 */
 #include <iostream> //Required for cout
 #include <cctype>   //Required for toupper()
+
 using namespace std;
 // Function prototypes.
+
 void stringupper(char *);
 int countchar(const char *, char);
 int main()
@@ -37,4 +39,15 @@ int countchar(const char *ptr_strg, char ch)
         ptr_strg++;
     }
     return cnt;
+}
+void stringupper(char *ptr_strg)
+{
+    // While not end of string.
+    while (*ptr_strg)
+    {
+        // Convert character to uppercase
+        *ptr_strg = toupper(*ptr_strg);
+        // Mover pointer to next character
+        ptr_strg++;
+    }
 }
